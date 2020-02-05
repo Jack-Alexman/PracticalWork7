@@ -23,8 +23,12 @@ public class Task74 {
         return matrix;
     }
     public static void printMatrix(int[][] matrix){
-        for (int[] ints : matrix) {
-            System.out.println(Arrays.toString(ints));
+        for (int[] row : matrix) {
+            System.out.print("[");
+            for (int elem : row){
+                System.out.print(String.format("%3d", elem));
+            }
+            System.out.println(" ]");
         }
     }
 
