@@ -10,8 +10,9 @@ public class Task75 {
         for (int i = 0; i < numbers.length(); i++){
             char symbol = numbers.charAt(i);
             int index = digits.indexOf(symbol);
-            result[index]++;
-
+            if (index != -1) {
+                result[index]++;
+            }
         }
         return result;
     }
