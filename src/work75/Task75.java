@@ -5,15 +5,13 @@ import java.util.Scanner;
 
 public class Task75 {
     public static int[] countOfSequenceNumbers(String numbers){
-        int[] result = new int[9];
-        for (int i = 1; i <= 9; i++){
-            int count = 0;
-            for (char a : numbers.toCharArray()) {
-                if (Integer.parseInt(Character.toString(a)) == i){
-                    count++;
-                }
-                result[i-1] = count;
-            }
+        int[] result = new int[10];
+        String digits = "0123456789";
+        for (int i = 0; i < numbers.length(); i++){
+            char symbol = numbers.charAt(i);
+            int index = digits.indexOf(symbol);
+            result[index]++;
+
         }
         return result;
     }
