@@ -23,8 +23,8 @@ public class Task73 {
         int size = scanner.nextInt();
         scanner.close();
         int [][] matr = createMatrix(size);
-        for (int i = 0; i < matr.length; i++){
-            System.out.println(Arrays.toString(matr[i]));
+        for (int[] ints : matr) {
+            System.out.println(Arrays.toString(ints));
         }
 
     }
