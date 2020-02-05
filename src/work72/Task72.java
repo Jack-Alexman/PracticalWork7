@@ -2,13 +2,13 @@ package work72;
 
 public class Task72 {
     public static int sumOddElementsArray(int[]  array){
+        if (array == null || array.length <= 1) {
+            return -1;
+        }
         int sumOdd = 0;
-        for (int i = 0; i < array.length; i++){
-            if (array[i] < 0){
-                return -1;
-            }
-            if ((array[i] > 0) && (array[i] % 2 != 0)){
-                sumOdd += array[i];
+        for (int value : array) {
+            if ((value > 0) && (value % 2 != 0)) {
+                sumOdd += value;
             }
         }
         return sumOdd;

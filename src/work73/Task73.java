@@ -7,6 +7,9 @@ import static work71.Task71.createArray;
 
 public class Task73 {
     public static int[][] createMatrix(int size){
+        if (size <=1){
+            return null;
+        }
         int[][] matrix = new int[size][size];
         int e = 0;
         for (int i = 0; i < matrix.length; i++){
